@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Btn{
+    background-color:  #2ab3e6;
+    padding: .75rem 1.25rem;
+    font-size:  1rem;
+    color: white;
+    letter-spacing:5px;
+    border-radius: 10rem;
+    position: relative;
+    z-index:1;
+
+}
+
+.Btn::before{
+    content:"";
+    background-color:#0d61aa;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    position: absolute;
+    border-radius: 10rem;
+    z-index: -2;
+    transform-origin: left;
+    transition: all 0.5s ease-out;
+    transform: scaleX(0);
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.Btn:hover::before{
+    transform: scaleX(1);
+    width: 100%;
+}
